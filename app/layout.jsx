@@ -6,7 +6,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://vanemoraiss.github.io/gabriela-morais-cv"
+    ? "https://gabriela-morais-cv.vercel.app/"
     : "http://localhost:3000";
 
 export const metadata = {
@@ -16,13 +16,8 @@ export const metadata = {
     template: "%s · Gabriela Morais",
   },
   description:
-    "CV de Gabriela Vanesa Morais. Administrativa con formación en facturación médica, Nomenclador Nacional y administración médica. Experiencia en internación domiciliaria, autorizaciones y liquidación de haberes.",
+    "CV de Gabriela Vanesa Morais. Administrativa especializada en facturación médica, Nomenclador Nacional (NN, PMO) y gestión de ART y obras sociales.",
   authors: [{ name: "Gabriela Vanesa Morais" }],
-  keywords: [
-    "facturista", "facturación ART", "obras sociales", "Nomenclador Nacional",
-    "administrativa médica", "internación domiciliaria", "liquidación de haberes",
-    "facturación sanatorial", "secretariado médico",
-  ],
   openGraph: {
     type: "profile",
     locale: "es_AR",
@@ -33,10 +28,10 @@ export const metadata = {
       "Facturación de ART y Obras Sociales · Nomenclador Nacional · Internación domiciliaria · Liquidación de haberes.",
     images: [
       {
-        url: `${baseUrl}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Gabriela Morais — Facturista / Administrativa",
+        url: "/profile.jpg",
+        width: 800,
+        height: 800,
+        alt: "Gabriela Morais",
       },
     ],
   },
@@ -45,7 +40,7 @@ export const metadata = {
     title: "Gabriela Morais — Facturista / Administrativa",
     description:
       "Facturación de ART y Obras Sociales · Nomenclador Nacional · Internación domiciliaria",
-    images: [`${baseUrl}/og-image.jpg`],
+    images: ["/profile.jpg"], // 👈 Usamos tu foto de perfil
   },
   robots: { index: true, follow: true },
 };

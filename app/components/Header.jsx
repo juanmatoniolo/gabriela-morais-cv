@@ -4,7 +4,7 @@ export default function Header({ data }) {
     return (
         <header className="mb-6 border-b border-slate-200 pb-6 sm:mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
             {data.foto && (
-                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-teal-700 shadow-sm sm:h-32 sm:w-32 print:hidden">
+                <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-teal-700 shadow-sm sm:h-32 sm:w-32 print:w-24 print:h-24">
                     <Image
                         src={data.foto}
                         alt={`Foto de ${data.nombre}`}
