@@ -15,14 +15,13 @@ html {
 @media print {
   @page {
     size: A4;
-    margin: 12mm;
+    margin: 10mm 12mm;
   }
 
-  /* Márgenes ajustados para aprovechar la hoja */
+  /* Márgenes aún más finos */
   body {
     background: white !important;
     -webkit-print-color-adjust: exact;
-    /* Fuerza la impresión de la foto y colores */
     print-color-adjust: exact;
   }
 
@@ -35,7 +34,9 @@ html {
     text-decoration: none;
   }
 
-  section {
+  /* Solo evitamos que un ítem de lista se corte por la mitad, 
+     no toda la sección entera, para que no queden huecos */
+  li {
     page-break-inside: avoid;
   }
 }

@@ -4,10 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const baseUrl =
-  process.env.NODE_ENV === "production"
-    ? "https://gabriela-morais-cv.vercel.app/"
-    : "http://localhost:3000";
+const baseUrl = process.env.NODE_ENV === "production"
+  ? "https://gabriela-morais-cv.vercel.app"
+  : "http://localhost:3000";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -28,7 +27,8 @@ export const metadata = {
       "Facturación de ART y Obras Sociales · Nomenclador Nacional · Internación domiciliaria · Liquidación de haberes.",
     images: [
       {
-        url: "/profile.jpg",
+        // Usamos la URL absoluta para que WhatsApp no falle
+        url: `${baseUrl}/profile.jpg`,
         width: 800,
         height: 800,
         alt: "Gabriela Morais",
@@ -40,7 +40,7 @@ export const metadata = {
     title: "Gabriela Morais — Facturista / Administrativa",
     description:
       "Facturación de ART y Obras Sociales · Nomenclador Nacional · Internación domiciliaria",
-    images: ["/profile.jpg"], // 👈 Usamos tu foto de perfil
+    images: [`${baseUrl}/profile.jpg`],
   },
   robots: { index: true, follow: true },
 };
