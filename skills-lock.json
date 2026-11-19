@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "web-design-engineer": {
+      "source": "ConardLi/garden-skills",
+      "commit": "9578a34edf3c359da23d8a632b72790834961d11",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-engineer/SKILL.md",
+      "computedHash": "c8fcbb8fa6b93cb47a1dec38c300489a2eb10b2874dc1a03e0e69163cf8b40d2"
+    }
+  }
+}

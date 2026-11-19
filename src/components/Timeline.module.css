@@ -1,0 +1,159 @@
+.list {
+	display: grid;
+	gap: var(--space-6);
+}
+
+.item {
+	position: relative;
+	display: grid;
+	gap: var(--space-3);
+	padding-left: var(--space-5);
+}
+
+/* Riel y punto de la línea de tiempo */
+.item::before {
+	content: "";
+	position: absolute;
+	left: 0.3rem;
+	top: 0.55rem;
+	bottom: calc(-1 * var(--space-6));
+	width: 1px;
+	background: var(--color-line);
+}
+
+.item:last-child::before {
+	bottom: 0;
+}
+
+.item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.35rem;
+	width: 0.65rem;
+	height: 0.65rem;
+	border-radius: var(--radius-full);
+	background: var(--color-bg);
+	border: 2px solid var(--color-accent);
+}
+
+.item:first-child::after {
+	background: var(--color-accent);
+}
+
+.head {
+	display: grid;
+	gap: 0.125rem;
+}
+
+.role {
+	font-size: var(--fs-md);
+	font-weight: 600;
+	line-height: var(--lh-snug);
+}
+
+.company {
+	color: var(--color-accent-strong);
+	font-weight: 500;
+}
+
+.meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 var(--space-3);
+	color: var(--color-muted);
+	font-size: var(--fs-sm);
+	font-variant-numeric: tabular-nums;
+}
+
+.meta span + span::before {
+	content: "·";
+	margin-right: var(--space-3);
+}
+
+.achievements {
+	display: grid;
+	gap: var(--space-2);
+}
+
+.achievements li {
+	position: relative;
+	padding-left: var(--space-4);
+}
+
+.achievements li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.72em;
+	width: 0.5rem;
+	height: 1px;
+	background: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+	.head {
+		grid-template-columns: 1fr auto;
+		column-gap: var(--space-4);
+	}
+
+	.role,
+	.company {
+		grid-column: 1;
+	}
+
+	.meta {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+	}
+
+	.meta span + span::before {
+		content: none;
+	}
+}
+
+@media print {
+	.list {
+		gap: 0.75rem;
+	}
+
+	.item {
+		gap: 0.3rem;
+		padding-left: 1rem;
+	}
+
+	.item::before {
+		bottom: -0.75rem;
+	}
+
+	.head {
+		grid-template-columns: 1fr auto;
+	}
+
+	.role,
+	.company {
+		grid-column: 1;
+	}
+
+	.meta {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.meta span + span::before {
+		content: none;
+	}
+
+	.achievements {
+		gap: 0.2rem;
+	}
+
+	.achievements li {
+		line-height: 1.4;
+	}
+}

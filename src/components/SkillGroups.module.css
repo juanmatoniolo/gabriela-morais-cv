@@ -1,0 +1,56 @@
+.groups {
+	display: grid;
+	gap: var(--space-5);
+}
+
+.group {
+	display: grid;
+	gap: var(--space-2);
+}
+
+.title {
+	color: var(--color-muted);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2);
+}
+
+.chip {
+	padding: 0.3rem 0.7rem;
+	border: 1px solid var(--color-line);
+	border-radius: var(--radius-full);
+	background: var(--color-surface);
+	color: var(--color-ink);
+	font-size: var(--fs-sm);
+	line-height: var(--lh-snug);
+	transition:
+		border-color var(--dur-fast) ease,
+		background-color var(--dur-fast) ease;
+}
+
+.chip:hover {
+	border-color: var(--color-accent);
+	background: var(--color-accent-soft);
+}
+
+@media print {
+	.groups {
+		gap: 0.6rem;
+	}
+
+	.chips {
+		gap: 0.25rem;
+	}
+
+	.chip {
+		padding: 0.1rem 0.45rem;
+		font-size: 0.9rem;
+	}
+}

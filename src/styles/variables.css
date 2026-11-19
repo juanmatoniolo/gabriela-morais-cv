@@ -1,0 +1,54 @@
+:root {
+	/* Color */
+	--color-bg: #f7f5f1;
+	--color-surface: #ffffff;
+	--color-ink: #1d2428;
+	--color-text: #2d373c;
+	--color-muted: #5a666d;
+	--color-line: #e3ded6;
+	--color-accent: #2f6f73;
+	--color-accent-strong: #235457;
+	--color-accent-soft: #e7efee;
+	--color-whatsapp: #1f7a4d;
+
+	/* Tipografía */
+	--font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+	--font-sans: var(--font-geist-sans), -apple-system, "Segoe UI", sans-serif;
+	--fs-xs: 0.8125rem;
+	--fs-sm: 0.9375rem;
+	--fs-base: 1rem;
+	--fs-md: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+	--fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+	--fs-xl: clamp(1.5rem, 1.25rem + 1.2vw, 2rem);
+	--fs-display: clamp(2.125rem, 1.4rem + 3.6vw, 3.75rem);
+	--lh-tight: 1.1;
+	--lh-snug: 1.35;
+	--lh-body: 1.6;
+
+	/* Espaciado (base 8px) */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.5rem;
+	--space-6: 2rem;
+	--space-7: 3rem;
+	--space-8: 4rem;
+	--gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+	--max-width: 72rem;
+
+	/* Forma */
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-full: 999px;
+	--shadow-1: 0 1px 2px rgb(29 36 40 / 0.06);
+	--shadow-2: 0 8px 24px -12px rgb(29 36 40 / 0.18);
+
+	/* Movimiento */
+	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+	--dur-fast: 160ms;
+	--dur-med: 320ms;
+
+	--tap: 44px;
+	--nav-h: 3.5rem;
+}

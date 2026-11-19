@@ -1,0 +1,165 @@
+.main {
+	position: relative;
+	width: 100%;
+	max-width: var(--max-width);
+	margin-inline: auto;
+	padding: 0 var(--gutter) var(--space-8);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas:
+		"perfil"
+		"exp"
+		"aside"
+		"edu"
+		"cursos";
+	gap: var(--space-7);
+}
+
+.perfil {
+	grid-area: perfil;
+}
+
+.exp {
+	grid-area: exp;
+}
+
+.aside {
+	grid-area: aside;
+	display: grid;
+	gap: var(--space-7);
+	align-content: start;
+	min-width: 0;
+}
+
+.edu {
+	grid-area: edu;
+}
+
+.cursos {
+	grid-area: cursos;
+}
+
+.lead {
+	max-width: 42rem;
+	color: var(--color-ink);
+	font-size: var(--fs-md);
+	line-height: 1.65;
+}
+
+.facts {
+	display: grid;
+	gap: var(--space-3);
+}
+
+.facts dt {
+	color: var(--color-muted);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.facts dd {
+	color: var(--color-ink);
+}
+
+.more {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--tap);
+	color: var(--color-accent-strong);
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	white-space: nowrap;
+	transition: color var(--dur-fast) ease;
+}
+
+.more::after {
+	content: "→";
+	margin-left: var(--space-1);
+	transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.more:hover::after {
+	transform: translateX(3px);
+}
+
+/* Texto para lectores automáticos: invisible en web y PDF. */
+.atsNote {
+	font-size: 1px;
+	line-height: 1;
+	color: var(--color-bg);
+	user-select: none;
+}
+
+@media (min-width: 1024px) {
+	.grid {
+		grid-template-columns: minmax(0, 1fr) 20rem;
+		grid-template-areas:
+			"perfil aside"
+			"exp    aside"
+			"edu    aside"
+			"cursos aside";
+		grid-template-rows: auto auto auto 1fr;
+		column-gap: var(--space-8);
+		row-gap: var(--space-7);
+	}
+
+	.aside {
+		position: sticky;
+		top: calc(var(--nav-h) + var(--space-5));
+		align-self: start;
+		padding: var(--space-5);
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius-md);
+		background: var(--color-surface);
+		box-shadow: var(--shadow-1);
+	}
+}
+
+@media (min-width: 1280px) {
+	.grid {
+		grid-template-columns: minmax(0, 1fr) 22rem;
+	}
+}
+
+@media print {
+	.main {
+		max-width: none;
+		padding: 0;
+	}
+
+	.grid {
+		grid-template-columns: minmax(0, 1fr) 30%;
+		grid-template-areas:
+			"perfil aside"
+			"exp    aside"
+			"edu    aside"
+			"cursos aside";
+		grid-template-rows: auto auto auto 1fr;
+		column-gap: 1.5rem;
+		row-gap: 0.9rem;
+	}
+
+	.aside {
+		gap: 0.9rem;
+	}
+
+	.lead {
+		font-size: 1rem;
+		line-height: 1.45;
+	}
+
+	.atsNote {
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+	}
+}
