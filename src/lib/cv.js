@@ -7,14 +7,23 @@ export const cv = {
 		telefono: "345 646-7684",
 		foto: "/profile.jpg",
 	},
-	perfil: "Administrativa especializada en facturación médica y administración sanatorial. Aplico nomencladores (NN, PMO, NBU), codificación CIE 10 y facturación electrónica para obras sociales y ART. Aporto controles de auditoría que aseguran la exactitud en la cobranza de prestaciones y la liquidación de haberes.",
+	perfil: "Administrativa especializada en facturación médica y administración sanatorial. Actualmente trabajo en Clínica de la Unión S.A. (Chajarí, Entre Ríos), a cargo de toda la facturación de ART y PAMI. Aplico nomencladores (NN, PMO, NBU), codificación CIE 10 y facturación electrónica para obras sociales y ART. Aporto controles de auditoría que aseguran la exactitud en la cobranza de prestaciones y la liquidación de haberes.",
 	destacados: [
-		{ valor: "+9 años", texto: "en administración y facturación del sector salud" },
+		{ valor: "+12 años", texto: "en administración y facturación del sector salud" },
 		{ valor: "216 h", texto: "de formación certificada por UTN.BA" },
 		{ valor: "4", texto: "cursos de facturación médica y Nomenclador" },
 		{ valor: "ART · PAMI", texto: "Asociar, Experta, IAPS y obras sociales" },
 	],
 	experiencia: [
+		{
+			empresa: "Clínica de la Unión S.A.",
+			cargo: "Administrativa - Facturista",
+			fecha: "2023 – Actualidad",
+			lugar: "Chajarí, Entre Ríos",
+			logros: [
+				"Tengo a cargo toda la facturación de ART y PAMI de la clínica.",
+			],
+		},
 		{
 			empresa: "Sanatorio Adventista del Plata (SAP)",
 			cargo: "Administrativa - Facturista",
