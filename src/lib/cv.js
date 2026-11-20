@@ -17,8 +17,8 @@ export const cv = {
 	experiencia: [
 		{
 			empresa: "Clínica de la Unión S.A.",
-			cargo: "Administrativa - Facturista",
-			fecha: "2023 – Actualidad",
+			cargo: "Facturista",
+			fecha: "Jun 2023 – Actualidad",
 			lugar: "Chajarí, Entre Ríos",
 			logros: [
 				"Tengo a cargo toda la facturación de ART y PAMI de la clínica.",
