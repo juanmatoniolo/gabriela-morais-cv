@@ -13,7 +13,7 @@ export default function Hero({ data, disponibilidad }) {
 						src={foto}
 						alt={`Retrato de ${nombre}`}
 						fill
-						sizes="(min-width: 768px) 176px, 112px"
+						sizes="(min-width: 768px) 176px, 88px"
 						className={styles.img}
 						priority
 					/>
@@ -21,8 +21,10 @@ export default function Hero({ data, disponibilidad }) {
 			)}
 
 			<div className={styles.body}>
-				<p className={styles.eyebrow}>Facturación médica · ART y Obras Sociales</p>
-				<h1 className={styles.name}>{nombre}</h1>
+				<div className={styles.identity}>
+					<p className={styles.eyebrow}>Facturación médica · ART y Obras Sociales</p>
+					<h1 className={styles.name}>{nombre}</h1>
+				</div>
 				<p className={styles.role}>{puesto}</p>
 				<p className={styles.location}>
 					{ciudad}
